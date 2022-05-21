@@ -1,0 +1,122 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Dessiner grâce aux évènements de souris</title>
+        <style>
+            body { 
+                margin: 0; 
+                background-color: black;
+                overflow: hidden
+            }
+        </style>
+        <link type="text/css" href="style.css" rel="stylesheet">
+        <script>
+            var canevas, zone_de_dessin, base_image=[], clicktenu=false;
+            window.addEventListener("load", init);
+            window.addEventListener("mousedown", boutonclick);
+            function boutonclick(){clicktenu = true}
+            window.addEventListener("mouseup", boutonrelache);
+            function boutonrelache(){clicktenu = false}
+
+            function init() {
+                canevas = document.getElementById("cadre");
+                zone_de_dessin = canevas.getContext("2d");
+                canevas.width = window.innerWidth - 10;
+                canevas.height = window.innerHeight - 12;
+                //insertion de l'image
+                base_image[0] = new Image();
+                base_image[0].src = 'image/10.png';
+                base_image[1] = new Image();
+                base_image[1].src = 'image/11.png';
+                base_image[2] = new Image();
+                base_image[2].src = 'image/12.png';
+                base_image[3] = new Image();
+                base_image[3].src = 'image/13.png';
+                base_image[4] = new Image();
+                base_image[4].src = 'image/14.png';
+                base_image[5] = new Image();
+                base_image[5].src = 'image/15.png';
+                base_image[6] = new Image();
+                base_image[6].src = 'image/16.png';
+                base_image[7] = new Image();
+                base_image[7].src = 'image/17.png';
+                base_image[8] = new Image();
+                base_image[8].src = 'image/18.png';
+                base_image[9] = new Image();
+                base_image[9].src = 'image/19.png';
+                base_image[10] = new Image();
+                base_image[10].src = 'image/20.png';
+                base_image[11] = new Image();
+                base_image[11].src = 'image/21.png';
+                base_image[12] = new Image();
+                base_image[12].src = 'image/22.png';
+                base_image[13] = new Image();
+                base_image[13].src = 'image/23.png';
+                base_image[14] = new Image();
+                base_image[14].src = 'image/24.png';
+                base_image[15] = new Image();
+                base_image[15].src = 'image/25.png';
+                base_image[16] = new Image();
+                base_image[16].src = 'image/26.png';
+                base_image[17] = new Image();
+                base_image[17].src = 'image/27.png';
+                base_image[18] = new Image();
+                base_image[18].src = 'image/28.png';
+                base_image[19] = new Image();
+                base_image[19].src = 'image/29.png';
+                base_image[20] = new Image();
+                base_image[20].src = 'image/30.png';
+                base_image[21] = new Image();
+                base_image[21].src = 'image/31.png';
+                base_image[22] = new Image();
+                base_image[22].src = 'image/32.png';
+                base_image[23] = new Image();
+                base_image[23].src = 'image/33.png';
+                base_image[24] = new Image();
+                base_image[24].src = 'image/34.png';
+                base_image[25] = new Image();
+                base_image[25].src = 'image/35.png';
+                base_image[26] = new Image();
+                base_image[26].src = 'image/36.png';
+                base_image[27] = new Image();
+                base_image[27].src = 'image/37.png';
+                base_image[28] = new Image();
+                base_image[28].src = 'image/38.png';
+                base_image[29] = new Image();
+                base_image[29].src = 'image/39.png';
+                base_image[30] = new Image();
+                base_image[30].src = 'image/40.png';
+                base_image[31] = new Image();
+                base_image[31].src = 'image/41.png';
+                base_image[32] = new Image();
+                base_image[32].src = 'image/42.png';
+                base_image[33] = new Image();
+                base_image[33].src = 'image/43.png';
+                base_image[34] = new Image();
+                base_image[34].src = 'image/44.png';
+                base_image[35] = new Image();
+                base_image[35].src = 'image/45.png';
+                base_image[36] = new Image();
+                base_image[36].src = 'image/46.png';
+                base_image[37] = new Image();
+                base_image[37].src = 'image/47.png';
+                base_image[38] = new Image();
+                base_image[38].src = 'image/48.png';
+                window.addEventListener("mousemove", dessine);
+            }
+
+            function dessine(event) {
+                if(clicktenu){
+                    var tirage= Math.floor(Math.random()*39);
+                    zone_de_dessin.drawImage(base_image[tirage], event.clientX, event.clientY,70,70);
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div id="retour"><a href="../../index.html">←(HOME)</a></div>
+        <div id="next"><a href="../texte_clignotant/index.html">→(NEXT)</a></div>
+        <canvas id="cadre" style="border: 5px solid red;"></canvas>
+    </body>
+</html>

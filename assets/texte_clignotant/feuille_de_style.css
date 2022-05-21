@@ -1,0 +1,95 @@
+body {
+    margin: 0px;
+    background: #5a5a5a;
+    overflow: hidden;
+}
+
+/*_________________________________________________________________________________BLINKING TEXT*/
+UL{
+    position: absolute;
+    top: 45%;
+    left: 50%;
+   
+    display: flex;
+    transform: translate(-50% ,-50%);
+}
+
+ul li{
+    list-style: none;
+    letter-spacing: 50px;
+    font-size: 10em;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 100;
+    text-transform: uppercase;
+    color:#00ff45;
+    animation: ani 1.2s linear infinite;
+    transform: skew(0deg, 0deg) rotate(0deg) scale(1, 1) matrix(0, 0, 0, 0, 0, 0);
+}
+
+img{
+    height: 70%;
+    width: 70%;
+}
+
+ul li:nth-child(1){
+    animation-delay: .2s;
+}
+ul li:nth-child(2){
+    animation-delay: .6s;
+}
+ul li:nth-child(3){
+    animation-delay: .8s;
+}
+ul li:nth-child(4){
+    animation-delay: 1.0s;
+}
+ul li:nth-child(5){
+    animation-delay: 1.4s;
+}
+ul li:nth-child(6){
+    animation-delay: 1.8s;
+}
+ul li:nth-child(7){
+    animation-delay: 2.1s;
+}
+ul li:nth-child(8){
+    animation-delay: 2.3s;
+}
+ul li:nth-child(9){
+    animation-delay: 2.6s;
+}
+
+@keyframes ani {
+    0%{
+        color:#343434;
+        text-shadow: none;
+    }
+    90%{
+        color:#343434;
+        text-shadow: none;
+    }
+    100%{
+        color:#343434;
+        text-shadow: 0 0 7px #00ff45,0 0 90px #00ff45;
+        font-size: 1em;
+        transform: skew(-900deg, 900deg) rotate(-900deg) scale(2, 0.5) matrix(5, 20, -20, 0, 0, 0);
+
+    }
+}
+/*_________________________________________________________________________________BLINKING TEXT END*/
+
+#retour {
+    top: 50px;
+    left: 50px;
+    font-size: 6em;
+    position: absolute;
+    z-index: 99;
+}
+
+#next {
+    bottom: 50px;
+    right: 50px;
+    font-size: 6em;
+    position: absolute;
+    z-index: 99;
+}

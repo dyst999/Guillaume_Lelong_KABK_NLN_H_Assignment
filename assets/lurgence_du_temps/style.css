@@ -1,0 +1,16 @@
+
+#retour {
+  top: 50px;
+  left: 50px;
+  font-size: 6em;
+  position: absolute;
+  z-index: 99;
+}
+
+#next {
+  bottom: 50px;
+  right: 50px;
+  font-size: 6em;
+  position: absolute;
+  z-index: 99;
+}
